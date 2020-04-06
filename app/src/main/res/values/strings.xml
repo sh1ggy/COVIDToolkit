@@ -3,4 +3,5 @@
     <string name="title_api">API</string>
     <string name="title_timer">Timer</string>
     <string name="title_faq">FAQs</string>
+    <string name="api_button">Retrieve</string>
 </resources>
