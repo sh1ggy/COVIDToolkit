@@ -3,5 +3,6 @@
     <string name="title_api">API</string>
     <string name="title_timer">Timer</string>
     <string name="title_faq">FAQs</string>
-    <string name="api_button">Retrieve</string>
+    <string name="timer_initial">00:20</string>
+    <string name="api_button">retrieve</string>
 </resources>
