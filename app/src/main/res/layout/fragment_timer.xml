@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="00:20" />
+        tools:text="@string/timer_initial" />
 
     <Button
         android:id="@+id/countdown_button"
