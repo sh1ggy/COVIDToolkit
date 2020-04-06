@@ -1,4 +1,4 @@
-package com.example.covidtoolkit.ui.notifications;
+package com.example.covidtoolkit.ui.timer;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.covidtoolkit.R;
 
-public class NotificationsFragment extends Fragment {
+public class TimerFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private TimerViewModel timerViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_faq, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(this, new Observer<String>() {
+        timerViewModel =
+                ViewModelProviders.of(this).get(TimerViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_timer, container, false);
+        final TextView textView = root.findViewById(R.id.text_dashboard);
+        timerViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

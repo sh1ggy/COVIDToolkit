@@ -1,4 +1,4 @@
-package com.example.covidtoolkit.ui.dashboard;
+package com.example.covidtoolkit.ui.api;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.covidtoolkit.R;
 
-public class DashboardFragment extends Fragment {
+public class APIFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private APIViewModel APIViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_timer, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(this, new Observer<String>() {
+        APIViewModel =
+                ViewModelProviders.of(this).get(APIViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_api, container, false);
+        final TextView textView = root.findViewById(R.id.text_home);
+        APIViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

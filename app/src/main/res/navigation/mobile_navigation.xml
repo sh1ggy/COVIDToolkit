@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_api"
-        android:name="com.example.covidtoolkit.ui.home.HomeFragment"
+        android:name="com.example.covidtoolkit.ui.api.APIFragment"
         android:label="@string/title_api"
         tools:layout="@layout/fragment_api" />
 
     <fragment
         android:id="@+id/navigation_timer"
-        android:name="com.example.covidtoolkit.ui.dashboard.DashboardFragment"
+        android:name="com.example.covidtoolkit.ui.timer.TimerFragment"
         android:label="@string/title_timer"
         tools:layout="@layout/fragment_timer" />
 
     <fragment
         android:id="@+id/navigation_faq"
-        android:name="com.example.covidtoolkit.ui.notifications.NotificationsFragment"
+        android:name="com.example.covidtoolkit.ui.faq.FAQFragment"
         android:label="@string/title_faq"
         tools:layout="@layout/fragment_faq" />
 </navigation>
