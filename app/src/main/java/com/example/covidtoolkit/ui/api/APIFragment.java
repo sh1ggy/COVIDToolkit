@@ -23,7 +23,7 @@ public class APIFragment extends Fragment {
         APIViewModel =
                 ViewModelProviders.of(this).get(APIViewModel.class);
         View root = inflater.inflate(R.layout.fragment_api, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
+        final TextView textView = root.findViewById(R.id.text_api);
         APIViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
