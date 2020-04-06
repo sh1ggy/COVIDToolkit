@@ -1,9 +1,11 @@
 package com.example.covidtoolkit.ui.timer;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -15,7 +17,6 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.covidtoolkit.R;
 
 public class TimerFragment extends Fragment {
-
     private TimerViewModel timerViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,

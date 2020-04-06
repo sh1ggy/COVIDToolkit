@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CountDownTimer countDownTimer;
     private long timeLeftInMilliseconds = 20000; //20 seconds
-    private boolean timerRunning;
+    private boolean timerRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // array of images
         int images[] = {R.drawable.handwash1, R.drawable.handwash2, R.drawable.handwash3, R.drawable.handwash4};
-
-        countdownText = findViewById(R.id.countdown_text);
-        countdownButton = findViewById(R.id.countdown_button);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -40,16 +37,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-
-        countdownButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startStop();
-            }
-        });
     }
 
-    public void startStop() {
+    /**
+     * Timer driver function
+     */
+    public void startStop(View view) {
+        countdownText = findViewById(R.id.countdown_text);
+        countdownButton = findViewById(R.id.countdown_button);
+
         if (timerRunning) {
             stopTimer();
         } else {
@@ -57,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Starts timer, counts down in seconds
+     */
     public void startTimer() {
         countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 100) {
             @Override
@@ -88,4 +87,5 @@ public class MainActivity extends AppCompatActivity {
 
         countdownText.setText(timeLeftText);
     }
+
 }

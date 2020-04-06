@@ -25,13 +25,15 @@
         android:id="@+id/countdown_button"
         android:layout_width="102dp"
         android:layout_height="61dp"
-        android:layout_marginTop="36dp"
         android:text="Start"
+        android:onClick="startStop"
         app:layout_constraintBottom_toTopOf="@+id/v_flipper"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countdown_text"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/countdown_text"
+        app:layout_constraintVertical_bias="0.479"
+        tools:ignore="HardcodedText" />
 
     <ViewFlipper android:id="@+id/v_flipper"
         android:layout_width="match_parent"
