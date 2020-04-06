@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
      * Starts timer, counts down in seconds
      */
     public void startTimer() {
-        countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 100) {
+        countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 timeLeftInMilliseconds = millisUntilFinished;
@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                stopTimer();
+                timeLeftInMilliseconds = 20000;
+                countdownText.setText("00:20");
             }
         }.start();
 
