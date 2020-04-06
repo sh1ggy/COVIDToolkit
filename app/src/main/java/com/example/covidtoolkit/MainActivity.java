@@ -1,7 +1,8 @@
 package com.example.covidtoolkit;
 
 import android.os.Bundle;
-import android.widget.ViewFlipper;
+import android.os.CountDownTimer;
+import android.widget.*;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -12,6 +13,12 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView countdownText;
+    private Button countdownButton;
+
+    private CountDownTimer countDownTimer;
+    private long timeLeftInMilliseconds = 20000; //20 seconds
+    private boolean timerRunning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,4 +38,43 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
+    public void startStop() {
+        if (timerRunning) {
+            stopTimer();
+        } else {
+            startTimer();
+        }
+    }
+
+    public void startTimer() {
+        countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 100) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeftInMilliseconds = millisUntilFinished;
+                updateTimer();
+            }
+
+            @Override
+            public void onFinish() {
+            }
+        }.start();
+
+        countdownButton.setText("Pause");
+        timerRunning = true;
+    }
+
+    public void stopTimer() {
+        countDownTimer.cancel();
+        countdownButton.setText("Start");
+        timerRunning = false;
+    }
+
+    public void updateTimer() {
+        int seconds = (int) timeLeftInMilliseconds / 1000;
+
+        String timeLeftText;
+        timeLeftText = "" + seconds;
+
+        countdownText.setText(timeLeftText);
+    }
 }

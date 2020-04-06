@@ -6,17 +6,32 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text_timer"
+        android:id="@+id/countdown_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00:20" />
+
+    <Button
+        android:id="@+id/countdown_button"
+        android:layout_width="102dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="36dp"
+        android:text="Start"
+        app:layout_constraintBottom_toTopOf="@+id/v_flipper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/countdown_text"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ViewFlipper android:id="@+id/v_flipper"
         android:layout_width="match_parent"
