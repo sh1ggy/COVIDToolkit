@@ -5,4 +5,14 @@
     <string name="title_faq">FAQs</string>
     <string name="timer_initial">00:20</string>
     <string name="api_button">retrieve</string>
+    <string name="faq_h1">What is COVID-19?</string>
+    <string name="faq_b1">Discovered in Wuhan, China in December of 2019, COVID-19 is an infectious disease caused by the coronavirus strain.\n</string>
+    <string name="faq_h2">What are the symptoms?</string>
+    <string name="faq_b2">Commonly a fever, tiredness and a dry cough are symptoms of COVID-19 though there may be an incubation period of up to 14 days. Less common symptoms include aching, nasal congestion, sore throat or diarrhea. Approximately 1 in 6 people become seriously ill and have breathing difficulties.\n</string>
+    <string name="faq_h3">How can I prevent the spread of COVID-19?</string>
+    <string name="faq_b3">Regularly wash your hands, maintain social distancing, avoid touching your face, self-isolate if necessary and keep updated on COVID-19’s severity in your area.\n</string>
+    <string name="faq_h4">How is the virus treated?</string>
+    <string name="faq_b4">Currently there is no vaccine or antibiotics to treat COVID-19, with the current preventative measure being admitted quarantines after testing.\n</string>
+    <string name="faq_h5">Are facemasks effective against preventing the spread of COVID-19?</string>
+    <string name="faq_b5">Only in situations where either you are exhibiting symptoms of COVID-19 or if you are looking after someone who is ill. Be mindful in the wastage of disposable facemasks as there have been shortages of them.\n\n\n\n\n\n</string>
 </resources>

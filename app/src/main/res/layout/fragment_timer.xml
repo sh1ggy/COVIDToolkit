@@ -13,13 +13,13 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
+        android:text="@string/timer_initial"
         android:textAlignment="center"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/timer_initial" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/countdown_button"
