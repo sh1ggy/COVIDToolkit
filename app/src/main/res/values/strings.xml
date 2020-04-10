@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">COVIDToolkit</string>
-    <string name="title_api">API</string>
+    <string name="title_api">Stats</string>
     <string name="title_timer">Timer</string>
     <string name="title_faq">FAQs</string>
     <string name="timer_initial">00:20</string>
     <string name="api_button">retrieve</string>
-    <string name="faq_h1">What is COVID-19?</string>
+    <string name="faq_h1">\nWhat is COVID-19?</string>
     <string name="faq_b1">Discovered in Wuhan, China in December of 2019, COVID-19 is an infectious disease caused by the coronavirus strain.\n</string>
     <string name="faq_h2">What are the symptoms?</string>
     <string name="faq_b2">Commonly a fever, tiredness and a dry cough are symptoms of COVID-19 though there may be an incubation period of up to 14 days. Less common symptoms include aching, nasal congestion, sore throat or diarrhea. Approximately 1 in 6 people become seriously ill and have breathing difficulties.\n</string>
