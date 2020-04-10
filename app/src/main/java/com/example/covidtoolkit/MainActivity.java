@@ -27,6 +27,8 @@ import org.json.JSONObject;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 public class MainActivity extends AppCompatActivity {
+    private ViewFlipper viewFlipper;
+
     private TextView countdownText;
     private Button countdownButton;
 
@@ -40,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // array of images
-        int images[] = {R.drawable.handwash1, R.drawable.handwash2, R.drawable.handwash3, R.drawable.handwash4};
-
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -56,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void corona_data (View view){
-        final TextView todayTxt = (TextView) findViewById(R.id.apiToday);
-        final TextView yesterdayTxt = (TextView) findViewById(R.id.apiYesterday);
-        final EditText countryTxt = (EditText) findViewById(R.id.apiEdit);
+        final TextView todayTxt = findViewById(R.id.apiToday);
+        final TextView yesterdayTxt = findViewById(R.id.apiYesterday);
+        final EditText countryTxt = findViewById(R.id.apiEdit);
 
         String todayApi = "https://corona.lmao.ninja/countries/" + countryTxt.getText();
         String yesterdayApi = "https://corona.lmao.ninja/yesterday/" + countryTxt.getText();
@@ -127,15 +126,21 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Listener for the onClick event
-     * @param view
      */
     public void startStop(View view) {
+        viewFlipper = findViewById(R.id.v_flipper);
         countdownText = findViewById(R.id.countdown_text);
         countdownButton = findViewById(R.id.countdown_button);
 
         if (timerRunning) {
+            viewFlipper.setAutoStart(false);
+            viewFlipper.stopFlipping();
             stopTimer();
+
         } else {
+            viewFlipper.setAutoStart(true);
+            viewFlipper.setFlipInterval(5000);
+            viewFlipper.startFlipping();
             startTimer();
         }
     }
@@ -144,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
      * Starts timer, counts down in seconds
      */
     public void startTimer() {
+        viewFlipper = findViewById(R.id.v_flipper);
         countDownTimer = new CountDownTimer(timeLeftInMilliseconds, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -154,6 +160,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 stopTimer();
+                viewFlipper.setDisplayedChild(0);
+                viewFlipper.setAutoStart(false);
+                viewFlipper.stopFlipping();
                 timeLeftInMilliseconds = 20000;
                 countdownText.setText("00:20");
             }
@@ -183,6 +192,4 @@ public class MainActivity extends AppCompatActivity {
 
         countdownText.setText(timeLeftText);
     }
-
-
 }

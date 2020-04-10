@@ -14,5 +14,11 @@
     <string name="faq_h4">How is the virus treated?</string>
     <string name="faq_b4">Currently there is no vaccine or antibiotics to treat COVID-19, with the current preventative measure being admitted quarantines after testing.\n</string>
     <string name="faq_h5">Are facemasks effective against preventing the spread of COVID-19?</string>
-    <string name="faq_b5">Only in situations where either you are exhibiting symptoms of COVID-19 or if you are looking after someone who is ill. Be mindful in the wastage of disposable facemasks as there have been shortages of them.\n\n\n\n\n\n</string>
+    <string name="faq_b5">Only in situations where either you are exhibiting symptoms of COVID-19 or if you are looking after someone who is ill. Be mindful in the wastage of disposable facemasks as there have been shortages of them.\n\n\n</string>
+    <string name="faq_link">Information extracted from: https://www.who.int/news-room/q-a-detail/q-a-coronaviruses\n\n\n\n\n\n</string>
+    <string name="timer_link">Diagram: https://www.who.int/gpsc/clean_hands_protection/en/</string>
+    <string name="timerIMG1">first 2 steps</string>
+    <string name="timerIMG2">steps 3 &#8211; 5</string>
+    <string name="timerIMG3">steps 6 &#8211; 8</string>
+    <string name="timerIMG4">steps 9 &#8211; 11</string>
 </resources>

@@ -108,6 +108,12 @@
                 android:text="@string/faq_b5"
                 android:textSize="15.5sp"/>
 
+            <TextView
+                android:id="@+id/textViewLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/faq_link" />
+
         </LinearLayout>
     </ScrollView>
 
